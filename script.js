@@ -94,7 +94,7 @@ function renderProjects() {
 
 async function bumpGlobalVisits() {
   try {
-    const res = await fetch('https://api.countapi.xyz/hit/gssoc-explorer/visits');
+    const res = await fetch('https://api.countapi.xyz/hit/devmatch/visits');
     const { value } = await res.json();
     visitCountEl.textContent = value;
   } catch (err) {
