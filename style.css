@@ -1,0 +1,196 @@
+:root {
+  --primary: #F26419;   /* bright orange */
+  --accent:  #19A7CE;   /* cheerful teal */
+  --bg:      #fff;
+  --fg:      #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--fg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0; flex: 1;
+  font-size: 1.5rem;
+}
+
+header input[type="file"] {
+  background: #fff;
+}
+
+header #filterInput {
+  flex: 1;
+  padding: 0.5rem;
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+}
+
+header .visits {
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  padding: 1.5rem;
+  margin-bottom: 80px; /* room for footer */
+  overflow-y: auto;
+}
+
+#projectList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Project card tweaks */
+.project-item {
+  position: relative;
+  background: #fefefe;
+  margin-bottom: 1.2rem;
+  padding: 1.2rem;
+  padding-top: 1.6rem; /* space for top stripe */
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Orange stripe across the top */
+.project-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.project-item:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Layout the title + actions */
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-top h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+/* GitHub icon link */
+.github-icon-link {
+  display: inline-flex;
+  width: 24px;   
+  height: 24px;
+  justify-content: center;   
+}
+
+
+.github-icon-link img.github-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Tech text */
+.project-item .tech {
+  margin-top: 0.6rem;
+  font-size: .95rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* Admin & mentors side-by-side */
+
+
+.meta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.meta-links span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.meta-links strong {
+  color: var(--primary);
+}
+
+.meta-links a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.meta-links a:hover {
+  text-decoration: underline;
+}
+
+.project-footer-row {
+  display: flex;
+
+  align-items: center;              
+  gap: 0.3rem;                        
+  margin-top: 0.8rem;
+  width: 50%;
+}
+
+.project-footer-row span {
+  flex: 1;                        
+  text-align: center;             
+}
+
+/* Fixed footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #000;
+}
+
