@@ -2,7 +2,7 @@
 Filter hundreds of GSSoC projects by your favorite tech stack and instantly access each repo, its admin, and mentors- all in one click.
 An intuitive, web app designed so that contributors can instantly zero in on the  projects they care about—no more wading through 200 repositories. Upload the official GSSoC Project Excel sheet, type your prefere tech stack (e.g. “python” or “react”), and watch the list filter itself in real time. Each card links straight to the GitHub repo, the project admin, and mentor LinkedIn profiles, all in a clean, GSSoC-inspired interface.
 
-Live Demo: 
+Live Demo: https://6881160477dadd6266ca55f8--devmatch-gssoc-edition.netlify.app/
 
 # Objective
 Contributors often hesitate when faced with hundreds of open-source projects. This tool empowers you to:
